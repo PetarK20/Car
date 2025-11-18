@@ -37,7 +37,15 @@ public class Test {
             car.printInfo();
         }
 
-        System.out.println("\n=== Проверка с конкретна кола ===");
+        ArrayList<Car> sortedCars = new ArrayList<>(CarManager.sortCarsByPrice(cars));
+
+        System.out.println("\n=== Коли сортирани по цена ===");
+        for (Car car : sortedCars) {
+            car.printInfo();
+        }
+
+
+        System.out.println("\n=== Проверка с конкретна кола (Tesla) ===");
         Car tesla = cars.get(0);
         tesla.printInfo();
         System.out.println("Електрическа: " + tesla.isElectric());
