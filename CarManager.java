@@ -21,4 +21,13 @@ public class CarManager {
         }
         return result;
     }
+    public static List<Car> sortCarsByPrice(List<Car> cars) {
+    List<Car> sortedCars = new ArrayList<>(cars);
+
+    sortedCars.sort((c1, c2) -> Double.compare(c1.getPrice(), c2.getPrice()));
+
+    return sortedCars;
 }
+
+}
+
